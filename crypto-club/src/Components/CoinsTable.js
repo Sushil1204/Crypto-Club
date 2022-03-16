@@ -153,11 +153,12 @@ export default function CoinsTable() {
                               style={{
                                 textTransform: "uppercase",
                                 fontSize: 22,
+                                marginLeft:10
                               }}
                             >
                               {row.symbol}
                             </span>
-                            <span style={{ color: "darkgrey" }}>
+                            <span style={{ color: "darkgrey", marginLeft:10 }}>
                               {row.name}
                             </span>
                           </div>
