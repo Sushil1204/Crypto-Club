@@ -24,7 +24,6 @@ const CoinInfo = ({ coin }) => {
     fetchHistoricData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency, days]);
-  console.log(historicData);
   const darkTheme = createTheme({
     palette: {
       primary: {
@@ -50,7 +49,6 @@ const CoinInfo = ({ coin }) => {
       },
     },
   }));
-  // console.log(historicData);
 
   const classes = useStyles();
 

@@ -34,7 +34,7 @@ const Header = () => {
       <AppBar color='transparent' position='static'>
       <Container>
         <Toolbar>
-          <Typography onClick={() => history.push("/")} className={classes.title} variant='h6'>Crypto Club</Typography>
+          <Typography onClick={() => history.push("/")} className={classes.title} variant='h6' style={{fontSize:25}}>Crypto Club</Typography>
           <Select variant='outlined' style={{
             width: 100,
             height: 40,

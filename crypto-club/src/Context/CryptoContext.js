@@ -31,10 +31,13 @@ const [watchlist, setWatchlist] = useState([])
       const coinRef = doc(db, "watchlist", user?.uid);
       var unsubscribe = onSnapshot(coinRef, coin => {
         if (coin.exists()) {
-          console.log(coin.data().coins);
           setWatchlist(coin.data().coins)
         } else {
-          console.log("No Items in Watchlist");
+          setAlert({
+            open: true,
+            message: `No coin present in watchlist`,
+            type: "success",
+          });
         }
       });
 
@@ -55,7 +58,6 @@ const [watchlist, setWatchlist] = useState([])
   const fetchCoins = async () => {
     setLoading(true);
     const { data } = await axios.get(CoinList(currency));
-    console.log(data);
 
     setCoins(data);
     setLoading(false);
